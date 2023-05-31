@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/29 10:00:52 by dmonjas-          #+#    #+#              #
-#    Updated: 2023/05/31 12:14:39 by dmonjas-         ###   ########.fr        #
+#    Updated: 2023/05/31 12:17:23 by dmonjas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ INC_DIR = ./inc/
 SRC_DIR = ./src/
 OBJ_DIR = ./obj/
 
-SRC_FILES = 
+SRC_FILES = ft_push_swap.c ft_error.c ft_rules1.c ft_rules2.c ft_rules3.c ft_utils.c \
+			ft_logic1.c ft_logic10.c ft_logic100.c ft_logic101.c
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
@@ -40,7 +41,7 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(INLUDE) $(LIBFT) -o $(NAME)
-	@echo "Pipex correcto"
+	@echo "Push_swap correcto"
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
@@ -51,6 +52,6 @@ clean:
 fclean: clean
 	@make -C $(LIBFT_DIR) fclean
 	@$(RM) $(NAME)
-	@echo "Pipex borrado"
+	@echo "Push_swap borrado"
 re: fclean all
 .PHONY: all re clean fclean
