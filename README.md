@@ -1,0 +1,1 @@
+Proyecto en el que tendras que implemantar un algoritmo de ordenacio, se le pasaran una serie de numeros desordenados al programa y este tendra que ordenarlos en el menor numero de movimientos posibles.
